@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <h1> Login Screen </h1>
+        <form method="post">
+            name:<input type="text" name="username" placeholder="username" id="userid" onblur="validateUser()">
+            <span class="error" id="usernameerrorid" style="color:red">
+            </span><br />
+            pwd:<input type="password" name="password" placeholder="password" id="passid" onblur="validatePassword()">
+            <span class="error" id="passworderrorid"></span><br />
+            confirm pwd: <input type="password" name="confirmpassword" placeholder="confirm password" id="confirmpassid" onblur="validateConfirmpassword()">
+            <span class="error" id="confirmpassworderrorid"></span><br />
+            submit: <input type="submit" name="submitname" placeholder="submit form" id="submitid" disabled   onblur="validateSubmit()">
+            <span class="error" id="submiterrid"></span><br />
+            agreed?:<input type="checkbox"  name="terms" placeholder="terms" id="termsid" onchange="validateTerms()">
+            <span class="error" id="termserrorid"></span><br />
+
+
+
+        </form>
+        <script>
+            function validateUser() {
+                var username = document.getElementById("userid").value;
+                if (username == "" || username == null) {
+                    document.getElementById("usernameerrorid").innerHTML = "Username is invalid";
+                }
+            }
+            function validatePassword() {
+                var password = document.getElementById("passid").value;
+                if (password == "" || password == null) {
+                    document.getElementById("passworderrorid").innerHTML = "Password is invalid";
+                }
+            }
+            function validateConfirmpassword() {
+                var password = document.getElementById("passid").value;
+                var confirmpassword = document.getElementById("confirmpassid").value;
+                if (password != confirmpassword) {
+                    document.getElementById("confirmpassworderrorid").innerHTML = "CONFIRM Password is invalid";
+                }
+            }
+            function validateTerms() {
+                var terms = document.getElementById("termsid");
+                if (terms.checked) {
+                    document.getElementById("submitid").disabled =false;
+                }else{
+                    document.getElementById("submitid").disabled = true;
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
