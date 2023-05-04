@@ -1,31 +1,36 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../Scripts/validate.js"></script>
 </head>
 
 <body>
-    <script src="C:\UiLearning\day3\Scripts\validate.js"></script>
-    <div>
+    <div class="container">
         <h1> Login Screen </h1>
-        <form method="post">
+        <form method="post" onsubmit="return processOnsubmit()">
             name:<input type="text" name="username" placeholder="username" id="userid" onblur="validateUser()">
             <span class="error" id="usernameerrorid" style="color:red">
             </span><br />
             pwd:<input type="password" name="password" placeholder="password" id="passid" onblur="validatePassword()">
             <span class="error" id="passworderrorid"></span><br />
-            confirm pwd: <input type="password" name="confirmpassword" placeholder="confirm password" id="confirmpassid" onblur="validateConfirmpassword()">
+            confirm pwd: <input type="password" name="confirmpassword" placeholder="confirm password" id="confirmpassid"
+                onblur="validateConfirmpassword()">
             <span class="error" id="confirmpassworderrorid"></span><br />
-            submit: <input type="submit" name="submitname" placeholder="submit form" id="submitid" disabled   onblur="validateSubmit()">
+            submit: <input type="submit" name="submitname" placeholder="submit form" id="submitid" disabled>
             <span class="error" id="submiterrid"></span><br />
-            agreed?:<input type="checkbox"  name="terms" placeholder="terms" id="termsid" onchange="validateTerms()">
+            agreed?:<input type="checkbox" name="terms" placeholder="terms" id="termsid" onchange="validateTerms()">
             <span class="error" id="termserrorid"></span><br />
 
 
 
         </form>
-        
-            </div>
+
+    </div>
+    <div id="outputId">
+
+    </div>
+
 </body>
 
 </html>
