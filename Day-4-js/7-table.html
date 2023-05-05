@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Table Example</title>
+</head>
+<body>
+	<button onclick="createTable()">Create Table</button>
+	<br><br>
+	<div id="tableContainer"></div>
+
+	<script>
+		function createTable() {
+			// Get the reference for the table container
+			var tableContainer = document.getElementById("tableContainer");
+
+			// Create a new table element
+			var table = document.createElement("table");
+
+			// Create a new row for the table header
+			var headerRow = document.createElement("tr");
+
+			// Create the header cells
+			var headerCell1 = document.createElement("th");
+			var headerCell2 = document.createElement("th");
+			var headerCell3 = document.createElement("th");
+
+			// Set the text for the header cells
+			headerCell1.innerHTML = "Name";
+			headerCell2.innerHTML = "Age";
+			headerCell3.innerHTML = "Gender";
+
+			// Add the header cells to the header row
+			headerRow.appendChild(headerCell1);
+			headerRow.appendChild(headerCell2);
+			headerRow.appendChild(headerCell3);
+
+			// Add the header row to the table
+			table.appendChild(headerRow);
+
+			// Create some data for the table
+			var data = [
+				{name: "John", age: 30, gender: "Male"},
+				{name: "Jane", age: 25, gender: "Female"},
+				{name: "Bob", age: 40, gender: "Male"}
+			];
+
+			// Loop through the data and create a new row for each item
+			for (var i = 0; i < data.length; i++) {
+				// Create a new row for the data
+				var dataRow = document.createElement("tr");
+
+				// Create the data cells
+				var dataCell1 = document.createElement("td");
+				var dataCell2 = document.createElement("td");
+				var dataCell3 = document.createElement("td");
+
+				// Set the text for the data cells
+				dataCell1.innerHTML = data[i].name;
+				dataCell2.innerHTML = data[i].age;
+				dataCell3.innerHTML = data[i].gender;
+
+				// Add the data cells to the data row
+				dataRow.appendChild(dataCell1);
+				dataRow.appendChild(dataCell2);
+				dataRow.appendChild(dataCell3);
+
+				// Add the data row to the table
+				table.appendChild(dataRow);
+			}
+
+			// Add the table to the table container
+			tableContainer.appendChild(table);
+		}
+	</script>
+</body>
+</html>

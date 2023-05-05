@@ -1,0 +1,40 @@
+<body>
+    <input type ="button" value="createTable" value="Create Table" onclick="createTable()">
+</body>
+<script>
+    function createTable(){
+        const tbl = document.createElement("table");
+        tbl.setAttribute("border", 1)
+        const headRow = document.createElement("tr");
+            const tblHead = document.createElement("thead");
+                const thId = document.createElement("th");
+              const idTxt = document.createTextNode("ID");
+        const thName = document.createElement("th");
+        const nameTxt = document.createTextNode("Name");
+    
+
+        tbl.appendChild(tblHead)
+        tblHead.appendChild(headRow)
+        headRow.appendChild(thId)
+        headRow.appendChild(thName)
+        thId.appendChild(idTxt)
+        thName.appendChild(nameTxt)
+
+        //data row1
+        const row1 = document.createElement("tr");
+            const tbody = document.createElement("tbody");
+                const td1 = document.createElement("td");
+              const td2 = document.createTextNode("td");
+
+        const tdIdVal= document.createTextNode("123");
+        const tdNameVal= document.createTextNode("Myname");
+        /*const thName = document.createElement("th");
+        const nameTxt = document.createTextNode("Name");*/
+        tb1.appendChild();
+        tb2.appendChild(tdNameVal)
+
+
+
+        document.body.appendChild(tbl)
+    }
+</script>

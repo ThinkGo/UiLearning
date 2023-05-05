@@ -1,0 +1,8 @@
+in EAS 6 and above js file is a module 
+this is to divided full project int osmall indipendent module
+in order to use class  function ..
+
+there are two wasy of exporting 
+1.   default export eg as below
+    export default Employee; //default
+2.

@@ -1,0 +1,22 @@
+<script>
+
+    let marks = [10, 20, 50,     100      , 200]
+    //console.log(marks[4])
+    let a = marks[0]
+    let b = marks[1]
+    console.log(a, b)
+    //arrya destructing is unbacking the value from arrays and assigning to individual variables
+    //arrays destructuring is improved as follows
+    let [score1, score3] = [100,200]
+    console.log(score1)
+    console.log(score3)
+
+    let [age, setAge] = [25, ()=> console.log("in setAge")]
+    console.log(age)
+    setAge()
+    let [age1, setAge1] = [30, ()=> console.log(`in setAge1 ${age1}`)]
+    console.log(age1)
+    setAge1()
+    
+
+</script>

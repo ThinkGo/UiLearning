@@ -1,0 +1,26 @@
+<head></head>
+
+<body>
+        <script>
+                function sort(fn) {
+                        // console. log("Sorting with default algorithm");
+                        fn();
+                }
+                // sort();
+                function heapSortingAlgorithm() {
+                        console.log("Sorting with heap sorting algorithm");
+                }
+
+                //passing function as an argument to another function.
+                sort(heapSortingAlgorithm);
+
+                sort(function () {
+                        console.log("Sorting with quick sorting algorithm")
+                });
+
+                sort(() => console.log("Sorting with Bubble sorting algorithm"));
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<script>
+
+    function outer(){
+        let name = "walmart"
+        function inner(){
+            console.log("inner "+ name);
+        }
+        //inner();
+        console.log("outer")
+        return inner;
+
+    }
+    // outer();
+    i =  outer();
+    i();
+</script>
