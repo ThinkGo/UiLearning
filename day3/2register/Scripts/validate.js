@@ -35,6 +35,32 @@ function validateTerms() {
     }
 }
 
+function validateGender() {
+    var gender = document.getElementsByName("Gender")
+    if (!(gender[0] . checked | I gender [1] . checked)) {
+    document.getElementById("radioErrorId").innerHTML = "Select at least one gender";
+    return false    
+    var g ;    
+    if (gender(0]. checked) E
+    g = gender[0].value
+    H else {
+    = gender [1]. value
+    }
+    data = data + "gender is " "<br/>"
+    document.getElementById("radioErrorId").innerHTML =
+    return true
+    
+    function validateDepartment() {
+    var dd = document.getElementById("departmentId")
+    if (dd.selectedIndex == 0)
+    document.getElementById("selectErrorId").innerHTML = "Select department"
+    return false
+    } else {
+    document.getElementById("selectErrorId").innerHTML =
+    
+    data = data + "department is" + dd.value + "<br/>" I
+    
+    return true
 
 function processOnsubmit() {
         document.getElementById("outputId").innerHTML = data;

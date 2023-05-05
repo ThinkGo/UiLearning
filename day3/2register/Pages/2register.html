@@ -17,11 +17,28 @@
             confirm pwd: <input type="password" name="confirmpassword" placeholder="confirm password" id="confirmpassid"
                 onblur="validateConfirmpassword()">
             <span class="error" id="confirmpassworderrorid"></span><br />
-            submit: <input type="submit" name="submitname" placeholder="submit form" id="submitid" disabled>
-            <span class="error" id="submiterrid"></span><br />
             agreed?:<input type="checkbox" name="terms" placeholder="terms" id="termsid" onchange="validateTerms()">
             <span class="error" id="termserrorid"></span><br />
 
+
+
+        
+            
+            Male <input type="radio" name="Gender" value="male" onchange="validateGender()">
+            Female <input type="radio" name="Gender" value="female" onchange="validateGender()">
+            <span class="Error" id="radioErrorId" style="color: red;"></span><br />
+            
+            <select name="Departments" id="departmentId" onchange="validateDepartment()">
+                <option>SELECT</option>
+                <option >HR </option>
+                <option >Accounts</option>
+            </select
+            <span class="Error" id="selectErrorId" style="color: red;"></span><br />
+            
+            
+
+            submit: <input type="submit" name="submitname" placeholder="submit form" id="submitid" disabled>
+            <span class="error" id="submiterrid"></span><br />
 
 
         </form>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <body>
+            <script>
+                function testFunc(){
+                    console.log("Test Funciton")
+                return 10;
+                }
+
+                //testFunc();
+                let ref= testFunc();
+                console.log(ref);
+                let t= testFunc;// here we are assigning function as a val to other variable
+                t();//t is an alias to testFunc
+                let i=10;
+                console.log(i);
+                //Approach 1- Function as Value
+                let d=function demo(){console.log("inside Demo Function");
+                            }
+                            d();
+                            //demo();
+                 //Approach 2 - annonymous function is JS
+                            let b=function (){console.log("inside annaonymous Function");
+                            }
+                            b();
+               //Approach 3- Arrow Function( added in ES6)
+                            let arrowFunc = ()=>{
+                    console.log('inside arrowFunction()');
+                }   
+                arrowFunc();        
+                let sum= (a,b)=>{
+                    return a+b;
+                } 
+               // sum(3,4);
+                console.log(sum(5,6));
+                //or if there is only one statement in arrow function omit flower braces. example
+                let result=(x,y)=> x+y; //x=y is automatically is return function of arrow function
+                console.log(result(10,11));
+                //
+                let len=s => s.length;
+                console.log(len("Walmart"));
+            
+                let noRetunFn=(x,y)=> console.log("noRetunFn="+x+y);
+                noRetunFn(1,2);
+
+
+            </script>
+        </body>
+    </head>
+</html>

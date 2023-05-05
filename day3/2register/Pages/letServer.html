@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+<script>
+    function demoVar(){
+        if(true){
+            var x=10;
+            console.log(x);
+                    // use LET instead of VAR keyword
+
+            var x=100;
+        }
+        console.log(x);// var delared with function scope and hence it is accessible outside scope
+
+    }
+    demoVar();
+    function demoLet(){
+        //let allows to user variables in block code
+        if(true){
+            let x=10;
+            x=100;// re-declaration of variable with let is not allowed in JS
+            console.log(x);
+        }
+        // variable created with let keyword have block scope and they are not accessible after the block scope
+
+    }
+    demoLet();
+    function demoConst(){
+        if(true){
+            Const x=10;
+            console.log(x);
+            }
+        
+
+    }
+    
+</script>
+    </body>
+</html>
